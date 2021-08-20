@@ -1,0 +1,11 @@
+﻿@using MEDIOClinic.Models.Menu;
+
+@model IEnumerable<MenuItemViewModel>
+
+<nav>
+    @foreach (MenuItemViewModel menuItem in Model)
+    {
+        @* Iterates through the view model collection and renders HTML links for the menu items *@
+        <a href="@menuItem.MenuItemRelativeUrl" title="@menuItem.MenuItemText">@menuItem.MenuItemText</a>
+    }
+</nav>

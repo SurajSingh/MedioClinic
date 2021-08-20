@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Medio Clinic - @ViewBag.Title</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <header>
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="col-sm-6">
+                <a href="./index.html" title="MedioClinic homepage" class="logo">MEDIO clinic</a>
+            </div>
+            <div class="col-sm-6 nav">
+                @await Component.InvokeAsync("NavigationMenu")
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
+    @RenderBody()
+    <footer>
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>MEDIO clinic</h4>
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> Address: <address>7A Kentico street, Bedford, NH 03110, USA</address></li>
+                        <li><i class="fa fa-envelope-o"></i> E-mail: <a href="mailto:info@medio-clinic.com" title="Email us">info@medio-clinic.com</a></li>
+                        <li><i class="fa fa-phone"></i> Phone number: <a href="tel:5417543010" title="Phone us">(541) 754-3010</a>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <span class="cms">Powered by <a href="https://xperience.io/" title="Kentico Xperience CMS">Kentico Xperience CMS for ASP.NET Core</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
